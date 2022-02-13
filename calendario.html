@@ -1,0 +1,90 @@
+<meta charset="utf-8">
+<title>Calendario</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+
+.data {
+	position: absolute;
+	font-family: 'Chela One', cursive;
+	font-size: 16px;
+	left: 136px;
+	top: 69px;
+	color: #fff9;
+	width: 258px;
+	height: 64px;
+	z-index: 16;
+	border: 1px;
+	text-shadow: 0 1px #0000ff, -1px 0 #0000ff, -1px 2px #000000, -2px 1px #0000ff, -2px 3px #0000ff, -3px 4px #000000, 2px 2px 2px rgba(206,89,55,0);
+}
+#Clock {
+	position: absolute;
+	top: 17px;
+	left: 164px;
+	width: 164px;
+	color: #0000ff;
+	font-family: 'Chela One', cursive;
+	font-size: 35px;
+	z-index: 36;
+	text-shadow: 0 1px #0000ff, -1px 0 #cdd2d5, -1px 2px #000000, -2px 1px #000000, -2px 3px #0000ff, -3px 4px #000000, 2px 2px 2px rgba(206,89,55,0);
+	height: 48px;
+}
+
+</style>
+&nbsp;&nbsp; <span id="Clock">02:21:45</span>
+<script language="JavaScript">
+<!--
+var Elem = document.getElementById("Clock");
+function Horario(){
+var Hoje = new Date();
+var Horas = Hoje.getHours();
+if(Horas < 10){
+Horas = "0"+Horas;
+}
+var Minutos = Hoje.getMinutes();
+if(Minutos < 10){
+Minutos = "0"+Minutos;
+}
+var Segundos = Hoje.getSeconds();
+if(Segundos < 10){
+Segundos = "0"+Segundos;
+}
+Elem.innerHTML = Horas+":"+Minutos+":"+Segundos;
+}
+window.setInterval("Horario()",1000);
+//-->
+</script>
+<div id="data" class="data">
+<script language="javascript">
+
+var fecha=new Date();
+var diames=fecha.getDate();
+var diasemana=fecha.getDay();
+var mes=fecha.getMonth() +1 ;
+var ano=fecha.getFullYear();
+
+var textosemana = new Array (7);
+textosemana[0]="Domenica";
+textosemana[1]="lunedi";
+textosemana[2]="Martedi";
+textosemana[3]="Mercoledi";
+textosemana[4]="Giovedi";
+textosemana[5]="Venerdi";
+textosemana[6]="Sabato";
+
+var textomes = new Array (12);
+textomes[1]="Gennaio";
+textomes[2]="Febbraio";
+textomes[3]="Marzo";
+textomes[4]="Aprile";
+textomes[5]="Maggio";
+textomes[6]="Giugno";
+textomes[7]="luglio";
+textomes[8]="Agosto";
+textomes[9]="Settembre";
+textomes[10]="Ottobre";
+textomes[11]="Novembre";
+textomes[12]="Dicembre";
+
+document.write("" + textosemana[diasemana] + " " + diames + " " + textomes[mes] + " " + ano + "<br>");
+
+</script><br><br><br></div>
