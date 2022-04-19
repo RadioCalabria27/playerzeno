@@ -769,7 +769,7 @@
 							
 case "radiozeno":
 ! function() {
-var t = "https://tools.zenoradio.com/api/stations/r950k185hwzuv" + zn + "/now_playing/?rand=" + Math.random();
+var t = "https://tools.zenoradio.com/api/stations/r950k185hwzuv/now_playing/?rand=" + zn + "/now_playing/?rand=" + Math.random();
 e.ajax({
 dataType: "text",
 method: "GET",
