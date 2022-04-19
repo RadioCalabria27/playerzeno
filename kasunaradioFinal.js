@@ -769,12 +769,13 @@
 							
 case "radiozeno":
 ! function() {
-var t = "https://tools.zenoradio.com/api/stations/r950k185hwzuv" + zn + "/now_playing/?rand=" + Math.random();
-e.ajax({
-dataType: "text",
-method: "GET",
+a.ajax({
+type: "GET",
 crossDomain: !0,
-url: t,
+cache: !1,
+url: "https://tools.zenoradio.com/api/stations/ea2mvm697f0uv/now_playing/?rand=" + Math.random(),
+dataType: "json",
+async: !0,
 success: function(e) {
 try {
 var t = JSON.parse(e);
